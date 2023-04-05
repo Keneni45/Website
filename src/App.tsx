@@ -1,11 +1,20 @@
 import { useState } from "react";
+import BlogUpload from "./Admin/BlogUpload/BlogUpload";
+import Post from "./Admin/Post/Post";
 
 import "./App.css";
+import Home from "./Home/Home";
 
 function App() {
-  const [count, setCount] = useState(0);
+  return (
+    <div className="App">
+      <h1>jjjjj</h1>
+      <Home />
 
-  return <div className="App">Welcome</div>;
+      <BlogUpload />
+      <Post />
+    </div>
+  );
 }
 
 export default App;
