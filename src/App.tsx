@@ -4,15 +4,12 @@ import Post from "./Admin/Post/Post";
 
 import "./App.css";
 import Home from "./Home/Home";
+import { string } from "yup";
 
 function App() {
   return (
     <div className="App">
-      <h1>jjjjj</h1>
-      <Home />
-
       <BlogUpload />
-      <Post />
     </div>
   );
 }

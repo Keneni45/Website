@@ -13,17 +13,7 @@ export default function Home() {
     <div>
       <div className="home-header">
         <ul className="unorderedList-item">
-          <li>
-            {" "}
-            {posts.map((Post) => (
-              <Post
-                username={posts.username}
-                caption={posts.caption}
-                imgUrl={posts.imgUrl}
-              />
-            ))}
-          </li>
-
+          <li>Home</li>
           <li>All Post</li>
           <li>Service</li>
           <li>About</li>

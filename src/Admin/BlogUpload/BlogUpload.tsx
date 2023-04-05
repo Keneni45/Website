@@ -3,23 +3,37 @@ import "./blogUpload.css";
 
 export default function BlogUpload({}) {
   const [imageUpload, setImageUpload] = useState(null);
-  const [caption, setCaption] = useState("");
+  const [blog, setBlog] = useState("");
   const [progress, setProgress] = useState(0);
   const [addText, setAddText] = useState("");
+  const [title, setTitle] = useState("");
+
   const handleChange = (e: any) => {
     if (e.target.files[0]) setImageUpload(e.target.files[0]);
   };
-  const handleUpload = () => {};
+  const handleUpload = (e: any) => {
+    setBlog(e.target.value);
+  };
   return (
     <div className="imageUpload">
       <progress className="imageUpload__progress" value={progress} max="100" />
+
       <input
         type="text"
-        placeholder="Enter a caption..."
-        className="imageUpload__input"
-        value={caption}
-        onChange={(e) => setCaption(e.target.value)}
+        placeholder="Enter Your Title"
+        className="title__upload"
+        value={title}
+        onChange={(e) => setTitle(e.target.value)}
       />
+
+      <input
+        type="text"
+        placeholder="Enter your Blog..."
+        className="imageUpload__input"
+        value={blog}
+        onChange={(e) => setBlog(e.target.value)}
+      />
+
       <input
         className="imageUpload__file"
         type="file"
