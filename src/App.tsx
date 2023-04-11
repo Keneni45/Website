@@ -1,17 +1,14 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import BlogUpload from "./Admin/BlogUpload/BlogUpload";
-import Post from "./Admin/Post/Post";
 
-import "./App.css";
-import Home from "./Home/Home";
-import { string } from "yup";
-
-function App() {
+export default function App() {
+  const [blogPost, setBlogPost] = useState("");
+  const updateName = (blog: string): void => {
+    setBlogPost(blog);
+  };
   return (
-    <div className="App">
+    <div>
       <BlogUpload />
     </div>
   );
 }
-
-export default App;

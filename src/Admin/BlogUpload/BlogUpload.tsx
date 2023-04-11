@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./blogUpload.css";
 
-export default function BlogUpload({}) {
+export default function BlogUpload() {
   const [imageUpload, setImageUpload] = useState(null);
   const [blog, setBlog] = useState("");
   const [progress, setProgress] = useState(0);
